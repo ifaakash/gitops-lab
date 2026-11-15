@@ -4,22 +4,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
-  labels:
-    app: podinfo
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: podinfo
   template:
-    metadata:
-      labels:
-        app: podinfo
-    spec: 
+    spec:
       containers:
         - name: podinfo
-          ports:
-            - containerPort: 9898
           env:
             - name: APP_ENV
-              value: 'dev'
+              value: dev
+            - name: PODINFO_UI_MESSAGE
+              value: hello from k3d
