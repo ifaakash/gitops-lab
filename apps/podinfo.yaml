@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/ifaakash/gitops-lab.git
     targetRevision: main
-    path: workloads/podinfo
+    path: workloads/podinfo/overlays/k3d
   destination:
     server: https://kubernetes.default.svc
     namespace: podinfo
